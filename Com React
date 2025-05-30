@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>React Sem JSX</title></head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <script>
+    const { useState } = React;
+
+    function App() {
+      const [color, setColor] = useState('blue');
+
+      return React.createElement(
+        'button',
+        {
+          onClick: () => setColor(color === 'blue' ? 'green' : 'blue'),
+          style: { backgroundColor: color, color: 'white', padding: '10px' }
+        },
+        'Mudar Cor'
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+</html>
