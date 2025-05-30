@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><title>React Sem JSX</title></head>
+<head><meta charset="UTF-8"><title>React</title></head>
 <body>
   <div id="root"></div>
 
